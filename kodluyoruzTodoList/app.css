@@ -1,0 +1,169 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body
+{
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container
+{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-form
+{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    border-radius: 16px;
+    padding: 15px 20px;
+    background-color: rgb(192, 192, 192);
+}
+
+.todo-title
+{
+    font-size: 2.3rem;
+    color: aliceblue;
+}
+
+.todo-div
+{
+    display: flex;
+    margin-top: 16px;
+}
+
+.todo-input
+{
+    width: 500px;
+    padding: 4px 6px;
+    font-size: 1rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+}
+
+.todo-btn
+{
+    padding: 4px 6px;
+    font-size: 1rem;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    outline: none;
+    background-color: rgba(235, 245, 255, 0.452);
+    cursor: pointer; 
+    transition: 0.1s;
+}
+
+.todo-btn:hover
+{
+    background-color: rgba(210, 225, 240, 0.315);
+}
+
+.todo-container
+{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    background-color: rgb(192, 192, 192);
+}
+
+.todo
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(32, 27, 25);
+}
+
+.todo:last-child{
+    border: none;
+}
+
+.left
+{
+    display: flex;
+    align-items: center;
+}
+
+.todo-text, .edit, .delete
+{
+    margin-left: 8px;
+    font-size: large;
+}
+.delete
+{
+    padding: 5px 24px;
+    border-radius: 30px;
+    background-color: #ff3d3d;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.delete:hover {
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type="checkbox"]
+{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+label{
+    color: #161616;
+    font-size: 55px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+
+
+}
+.check-box:after
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 15px;
+    color: black;
+    display: none;
+}
+
+.check-box:hover
+{
+    background-color: gainsboro;
+}
+
+.check-box:checked:after
+{
+    display: block;
+}
+
+.check-box:checked ~ .todo-text
+{
+    color: rgb(41, 131, 0);
+}
